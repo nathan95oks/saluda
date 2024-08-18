@@ -24,13 +24,7 @@ function saludar(nombre, genero, edad, idioma) {
     // Añade un mensaje basado en la edad en inglés
     if (edad) {
       const edadNumber = Number(edad);
-      if (edadNumber < 18) {
-        saludo += " You're very young!";
-      } else if (edadNumber >= 18 && edadNumber < 60) {
-        saludo += " Nice to meet you!";
-      } else {
-        saludo += " Greetings to a wise adult!";
-      }
+      saludo += ` You are ${edadNumber} years old.`;
     }
   } else {
     // Genera el saludo en español basado en el nombre y género
@@ -55,13 +49,7 @@ function saludar(nombre, genero, edad, idioma) {
     // Añade un mensaje basado en la edad en español
     if (edad) {
       const edadNumber = Number(edad);
-      if (edadNumber < 18) {
-        saludo += " ¡Eres muy joven!";
-      } else if (edadNumber >= 18 && edadNumber < 60) {
-        saludo += " ¡Qué gusto conocerte!";
-      } else {
-        saludo += " ¡Un saludo a un adulto sabio!";
-      }
+      saludo += ` Tienes ${edadNumber} años.`;
     }
   }
 

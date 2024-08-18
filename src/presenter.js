@@ -12,7 +12,7 @@ const div = document.querySelector("#resultado-div");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  // Obtiene el valor del nombre, género, edad y idioma
+  // Obtiene el valor del nombre, género, edad e idioma
   const nombre = nombreInput.value.trim();
   const genero = generoSelect.value;
   const edad = edadInput.value.trim();
