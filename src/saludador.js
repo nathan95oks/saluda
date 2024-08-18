@@ -1,18 +1,38 @@
-function saludar(nombre, genero) {
+function saludar(nombre, genero, edad) {
+  let saludo = "";
+
+  // Genera el saludo basado en el nombre y género
   if (nombre) {
     switch (genero) {
       case "masculino":
-        return `Hola, Sr. ${nombre}!`;
+        saludo = `Hola, Sr. ${nombre}!`;
+        break;
       case "femenino":
-        return `Hola, Sra. ${nombre}!`;
+        saludo = `Hola, Sra. ${nombre}!`;
+        break;
       case "no-binario":
-        return `Hola, ${nombre}!`;
+        saludo = `Hola, ${nombre}!`;
+        break;
       default:
-        return `Hola, ${nombre}!`;
+        saludo = `Hola, ${nombre}!`;
     }
   } else {
-    return "Hola!";
+    saludo = "Hola!";
   }
+
+  // Añade un mensaje basado en la edad
+  if (edad) {
+    const edadNumber = Number(edad);
+    if (edadNumber < 18) {
+      saludo += " ¡Eres muy joven!";
+    } else if (edadNumber >= 18 && edadNumber < 60) {
+      saludo += " ¡Qué gusto conocerte!";
+    } else {
+      saludo += " ¡Un saludo a un adulto sabio!";
+    }
+  }
+
+  return saludo;
 }
 
 export default saludar;
